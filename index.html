@@ -7,6 +7,10 @@
     <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
     <meta charset=utf-8 />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Clothing Planner</title>
 </head>
@@ -14,39 +18,140 @@
     <div>
         <h1>Clothing Planner</h1>
     </div>
-    <div>
-        <h2>Hats</h2>
-        <input class="" id="fileUploadInput" type="file" onchange="readURL(this);" >
-        <img id="blah" src="#" alt="your image" />
+
+    <div class="content">
+        <div class="closet">
+            <div >
+                <h2>Hats</h2>
+                <img class="hats" src="hat1.png">
+                <img class="hats" src="hat2.png">
+                <input class="" id="fileUploadInput" type="file" multiple >
+            </div>
+            <div>
+                <h2>Tops</h2>
+                <img class="tops" src="shirt1.png">
+                <img class="tops" src="shirt2.png">
+                <img class="tops" src="shirt3.png">
+                <input class="" id="fileUploadInput" type="file" multiple>
+            </div>
+            <div >
+                <h2>Bottoms</h2>
+                <img class="bottoms" src="bottoms1.png">
+                <img class="bottoms" src="bottoms2.png">
+                <img class="bottoms" src="bottoms3.png">
+                <input class="" id="fileUploadInput" type="file" multiple>
+            </div>
+            <div >
+                <h2>Shoes</h2>
+                <img class="shoes" src="shoes1.png">
+                <img class="shoes" src="shoes2.png">
+                <input class="" id="fileUploadInput" type="file" multiple>
+            </div>
+            <div >
+                <h2>Accessories</h2>
+                <img class="accessories" src="accessories1.png">
+                <input class="" id="fileUploadInput" type="file" multiple>
+            </div>
+        </div>
+        <div class="dress-up-place">
+            <div class="mannequin">
+                <button id="view-outfits">Click to View Outfits</button>
+                <div class = clothes id="hat">
+                    hat
+                    <img class="hats" src="hat2.png">
+                </div>
+                
+                <div class = clothes id="top">
+                    top
+                    <img class="tops" src="shirt1.png">
+                </div>
+                <div class = clothes id="bottom">
+                    bottom
+                    <img class="bottoms" src="bottoms3.png">
+                </div>
+                <div class = clothes id="shoes">
+                    shoes
+                    <img class="shoes" src="shoes1.png">
+                </div>
+                <div class = clothes id="accessories">
+                    accessories
+                </div>
+            </div>
+            <div>
+                <h2>Create My Outfit<h2>
+                <label style="font-size:15px" for="Weather">Weather:</label>
+                <select if="Weather" name = Weather>
+                    <option value="sunny">Sunny</option>
+                    <option value="rainy">Rainy</option>
+                    <option value="snowy">Snowy</option>
+                    <option value="windy">Windy</option>
+                </select>
+                <label style="font-size:15px" for="Occasion">Occasion:</label>
+                <select if="Occasion" name = Occasion>
+                    <option value="formal">Formal</option>
+                    <option value="casual">Casual</option>
+                    <option value="business">Business</option>
+                </select>
+                <label style="font-size:15px" for="Color">Color</option>
+                <select if="Color" name = Color>
+                    <option value="pink">Pink</option>
+                    <option value="red">Red</option>
+                    <option value="orange">Orange</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option value="purple">Purple</option>
+                    <option value="white">White</option>
+                    <option value="gray">Gray</option>
+                    <option value="black">Black</option>
+                    <option value="brown">Brown</option>
+                </select>
+                <p></p>
+                <button type="button">Generate outfits</button>
+            </div>
+        </div>
     </div>
+    
     <div>
-        <h2>Tops</h2>
-        <input class="" id="fileUploadInput" type="file">
+        <h2>Previously Generated Outfits</h2>
+        <div class="outfit-list">
+            <div class="outfit">
+                <img class="hats" src="hat1.png">
+                <img class="accessories" src="accessories1.png">
+                <img class="tops" src="shirt2.png">
+                <img class="bottoms" src="bottoms1.png">
+                <img class="shoes" src="shoes2.png">
+            </div>
+            <div class="outfit">
+                <img class="accessories" src="accessories1.png">
+                <img class="tops" src="shirt3.png">
+                <img class="bottoms" src="bottoms3.png">
+                <img class="shoes" src="shoes1.png">
+            </div>
+            <div class="outfit">
+                <img class="hats" src="hat2.png">
+                <img class="tops" src="shirt1.png">
+                <img class="bottoms" src="bottoms3.png">
+                <img class="shoes" src="shoes1.png">
+            </div>
+        </div>
+        <h2>Recently Worn Outfits</h2>
+        <div class="outfit">
+            <img class="accessories" src="accessories1.png">
+            <img class="tops" src="shirt3.png">
+            <img class="bottoms" src="bottoms3.png">
+            <img class="shoes" src="shoes1.png">
+        </div>
     </div>
-    <div>
-        <h2>Bottoms</h2>
-        <input class="" id="fileUploadInput" type="file">
+    <div class="set">
+        <section>
+            <div id=star class="star star1"><img src="star.png"></div>
+            <div id=star class="star star2"><img src="star.png"></div>
+            <div id=star class="star star3"><img src="star.png"></div>
+            <div id=star class="star star4"><img src="star.png"></div>
+        </section>
     </div>
-    <div>
-        <h2>Shoes</h2>
-        <input class="" id="fileUploadInput" type="file">
-    </div>
-    <div>
-        <h2>Accesories</h2>
-        <input class="" id="fileUploadInput" type="file">
-    </div>
-    <div>
-        <h3>Weather</h3>
-    </div>
-    <div>
-        <h3>Occasion</h3>
-    </div>
-    <div>
-        <h3>Attire</h3>
-    </div>
-    <div>
-        <h2>Create my outfit</h2>
-    </div>
+    
     <script src="scripts.js"></script>
 </body>
 </html>
